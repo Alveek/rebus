@@ -76,7 +76,6 @@ button:focus {
   position: relative;
   font-size: 16px;
 }
-
 .switch__input {
   position: absolute;
   top: 0;
@@ -86,13 +85,11 @@ button:focus {
   opacity: 0;
   z-index: 0;
 }
-
 .switch__label {
   display: block;
   padding: 0 0 0 44px;
   cursor: pointer;
 }
-
 .switch__label:before {
   content: "";
   position: absolute;
@@ -106,7 +103,6 @@ button:focus {
   -webkit-transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .switch__label:after {
   content: "";
   position: absolute;
@@ -124,12 +120,10 @@ button:focus {
   -webkit-transition-property: left, background-color;
   transition-property: left, background-color;
 }
-
-.switch__input:checked+.switch__label:before {
+.switch__input:checked + .switch__label:before {
   background-color: #d5b5fd;
 }
-
-.switch__input:checked+.switch__label:after {
+.switch__input:checked + .switch__label:after {
   left: 16px;
   background-color: #6200ee;
 }
@@ -151,162 +145,6 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background: #375eea;
 }
-
 progress::-moz-progress-bar {
   background-color: #375eea;
-}
-
-/* ---------------Exercise Styles------------------- */
-.header {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  height: 70px;
-}
-
-.header-container {
-  height: 62px;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: max-content max-content;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.ex-title {
-  font-size: 18px;
-  color: #375eea;
-}
-
-main {
-  display: grid;
-}
-
-input {
-  margin: 0;
-}
-
-.hint {
-  justify-self: center;
-  margin: 17px 0 7px;
-}
-
-.hint img {
-  height: 101px;
-}
-
-img {
-  max-width: 100%;
-}
-
-.container {
-  width: 1200px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 1fr 2fr 1fr;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas:
-    "img-1 rebus img-2"
-    ". rebus ."
-    "img-3 rebus img-4";
-}
-
-.img-1 {
-  grid-area: img-1;
-  margin-bottom: 120px;
-  justify-self: start;
-}
-
-.img-2 {
-  grid-area: img-2;
-  margin-bottom: 120px;
-  justify-self: end;
-}
-
-.img-3 {
-  grid-area: img-3;
-  justify-self: start;
-}
-
-.img-4 {
-  grid-area: img-4;
-  justify-self: end;
-}
-
-.rebus {
-  grid-area: rebus;
-  align-content: center;
-  max-height: 136px;
-  margin: 0 50px;
-}
-
-.img-var {
-  width: 180px;
-  border-radius: 7px;
-  transition: all 0.1s linear;
-  padding: 10px;
-}
-
-.img-var:hover {
-  cursor: pointer;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(-10px);
-}
-
-.img-var:active {
-  transform: translateY(0px);
-  box-shadow: none;
-}
-
-.appear {
-  animation-duration: 1s;
-  animation-name: appear;
-}
-
-.transparent {
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 100%;
-  }
-}
-
-@media (max-width: 1400px) {
-  .container {
-    width: 1000px;
-  }
-
-  .header {
-    height: 58px;
-  }
-
-  .header-container {
-    height: 50px;
-  }
-
-  .img-var {
-    width: 130px;
-  }
-
-  .rebus {
-    height: 110px;
-  }
-
-  .hint img {
-    height: 85px;
-  }
-
-  .img-1 {
-    margin-bottom: 120px;
-  }
-
-  .img-2 {
-    margin-bottom: 120px;
-  }
 }

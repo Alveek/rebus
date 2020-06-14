@@ -1,102 +1,184 @@
 export let exercises = [
   {
-    ex: 0,
+    step: 0,
     variants: ["pizhama", "pila", "pianino", "pirogi"],
-    solution: "pila"
+    rebus: [
+      { ru: "пи", eng: "pi", image: false },
+      { ru: "ла", eng: "la", image: true }
+    ]
   },
   {
-    ex: 1,
+    step: 1,
     variants: ["pizhama", "plamya", "pianino", "pirogi"],
-    solution: "pizhama"
+    rebus: [
+      { ru: "пи", eng: "pi", image: false },
+      { ru: "жа", eng: "zha", image: true },
+      { ru: "ма", eng: "ma", image: true }
+    ]
   },
   {
-    ex: 2,
+    step: 2,
     variants: ["planeta", "plamya", "pianino", "pirogi"],
-    solution: "pianino"
+    rebus: [
+      { ru: "пи", eng: "pi", image: false },
+      { ru: "а", eng: "a", image: true },
+      { ru: "ни", eng: "ni", image: true },
+      { ru: "но", eng: "no", image: true }
+    ]
   },
   {
-    ex: 3,
+    step: 3,
     variants: ["planeta", "plamya", "piramida", "pirogi"],
-    solution: "pirogi"
+    rebus: [
+      { ru: "пи", eng: "pi", image: false },
+      { ru: "ро", eng: "ro", image: true },
+      { ru: "ги", eng: "gi", image: true }
+    ]
   },
   {
-    ex: 4,
+    step: 4,
     variants: ["planeta", "plamya", "piramida", "pauki"],
-    solution: "piramida"
+    rebus: [
+      { ru: "пи", eng: "pi", image: false },
+      { ru: "ра", eng: "ra", image: true },
+      { ru: "ми", eng: "mi", image: true },
+      { ru: "да", eng: "da", image: true }
+    ]
   },
   {
-    ex: 5,
-    variants: ["planeta", "plamya", "pluses", "pauki"],
-    solution: "plamya"
+    step: 5,
+    variants: ["planeta", "plamya", "plyusy", "pauki"],
+    rebus: [
+      { ru: "п", eng: "p", image: false },
+      { ru: "ла", eng: "la", image: true },
+      { ru: "мя", eng: "mya", image: true }
+    ]
   },
   {
-    ex: 6,
-    variants: ["planeta", "pautina", "pluses", "pauki"],
-    solution: "planeta"
+    step: 6,
+    variants: ["planeta", "pautina", "plyusy", "pauki"],
+    rebus: [
+      { ru: "п", eng: "p", image: false },
+      { ru: "ла", eng: "la", image: true },
+      { ru: "не", eng: "ne", image: true },
+      { ru: "та", eng: "ta", image: true }
+    ]
   },
   {
-    ex: 7,
-    variants: ["plody", "pautina", "pluses", "pauki"],
-    solution: "plody"
+    step: 7,
+    variants: ["plody", "pautina", "plyusy", "pauki"],
+    rebus: [
+      { ru: "п", eng: "p", image: false },
+      { ru: "ло", eng: "lo", image: true },
+      { ru: "ды", eng: "dy", image: true }
+    ]
   },
   {
-    ex: 8,
-    variants: ["panama", "pautina", "pluses", "pauki"],
-    solution: "pluses"
+    step: 8,
+    variants: ["panama", "pautina", "plyusy", "pauki"],
+    rebus: [
+      { ru: "п", eng: "p", image: false },
+      { ru: "лю", eng: "lyu", image: true },
+      { ru: "сы", eng: "sy", image: true }
+    ]
   },
   {
-    ex: 9,
-    variants: ["parusa", "pautina", "pluses", "pauki"],
-    solution: "pauki"
+    step: 9,
+    variants: ["parusa", "pautina", "plyusy", "pauki"],
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "у", eng: "u", image: true },
+      { ru: "ки", eng: "ki", image: true }
+    ]
   },
   {
-    ex: 10,
+    step: 10,
     variants: ["panama", "pautina", "parusa", "pakety"],
-    solution: "parusa"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "ру", eng: "ru", image: true },
+      { ru: "са", eng: "sa", image: true }
+    ]
   },
   {
-    ex: 11,
+    step: 11,
     variants: ["panama", "pautina", "lopata", "pakety"],
-    solution: "pautina"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "у", eng: "u", image: true },
+      { ru: "ти", eng: "ti", image: true },
+      { ru: "на", eng: "na", image: true }
+    ]
   },
   {
-    ex: 12,
+    step: 12,
     variants: ["panama", "pariki", "lopata", "pakety"],
-    solution: "panama"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "на", eng: "na", image: true },
+      { ru: "ма", eng: "ma", image: true }
+    ]
   },
   {
-    ex: 13,
+    step: 13,
     variants: ["papa", "pariki", "lopata", "pakety"],
-    solution: "lopata"
+    rebus: [
+      { ru: "ло", eng: "lo", image: true },
+      { ru: "па", eng: "pa", image: false },
+      { ru: "та", eng: "ta", image: true }
+    ]
   },
   {
-    ex: 14,
+    step: 14,
     variants: ["papa", "pariki", "paromy", "pakety"],
-    solution: "pakety"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "ке", eng: "ke", image: true },
+      { ru: "ты", eng: "ty", image: true }
+    ]
   },
   {
-    ex: 15,
+    step: 15,
     variants: ["papa", "pariki", "paromy", "pasha"],
-    solution: "papa"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "па", eng: "pa", image: false }
+    ]
   },
   {
-    ex: 16,
+    step: 16,
     variants: ["pribory", "pariki", "paromy", "pasha"],
-    solution: "pariki"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "ри", eng: "ri", image: true },
+      { ru: "ки", eng: "ki", image: true }
+    ]
   },
   {
-    ex: 17,
+    step: 17,
     variants: ["pribory", "pila", "paromy", "pasha"],
-    solution: "paromy"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "ро", eng: "ro", image: true },
+      { ru: "мы", eng: "my", image: true }
+    ]
   },
   {
-    ex: 18,
+    step: 18,
     variants: ["pribory", "pila", "pianino", "pasha"],
-    solution: "pasha"
+    rebus: [
+      { ru: "па", eng: "pa", image: false },
+      { ru: "ша", eng: "sha", image: true }
+    ]
   },
   {
-    ex: 19,
+    step: 19,
     variants: ["pribory", "pila", "pianino", "pirogi"],
-    solution: "pribory"
+    rebus: [
+      { ru: "п", eng: "p", image: false },
+      { ru: "ри", eng: "ri", image: true },
+      { ru: "бо", eng: "bo", image: true },
+      { ru: "ры", eng: "ry", image: true }
+    ]
   }
 ];
