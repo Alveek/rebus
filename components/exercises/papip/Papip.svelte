@@ -5,7 +5,7 @@
     wellDonePhrasesSrc,
     correctGuess,
     wrongGuess,
-    tryAgain
+    tryAgain,
   } from "../sounds";
 
   preloadMedia();
@@ -17,7 +17,7 @@
   function getRebus() {
     let arr = [];
 
-    exercises[currentStep].rebus.forEach(element => {
+    exercises[currentStep].rebus.forEach((element) => {
       arr.push(element.eng);
     });
 
@@ -48,53 +48,6 @@
     }
   }
 </script>
-
-
-<main>
-  {#if exercises[currentStep]}
-    <div class="header">
-      <div class="header-container">
-        <div class="switch">
-          <input type="checkbox" id="switch1" class="switch__input" bind:checked={showHint}>
-          <label for="switch1" class="switch__label">Подсказка</label>
-        </div>
-        <span class="ex-title">Упражнение №12</span>
-      </div>
-
-      <progress class="progress" max="19" value={currentStep}></progress>
-    </div>
-
-    <div class="hint">
-      <img class:transparent={!showHint} src="/exercises/papip/images/rebuses/papip-hint.png" alt="hint">
-    </div>
-
-  <div class="container">
-    {#each exercises[currentStep].variants as word, index}
-      <img src="/exercises/papip/images/variant-images/{word}.png" class="img-{index + 1} img-var" data-name={word} on:click={check} alt="img" />
-    {/each}
-
-
-    <!-- <img src="/exercises/papip/images/rebuses/{exercises[currentStep].rebus}.png" class="rebus" alt="img"> -->
-    <div class="rebus">
-      {#each exercises[currentStep].rebus as slog, index}
-      {#if (!slog.image)}
-        <span class="rebus-text">{slog.ru.toUpperCase()}</span>
-      
-      {:else}
-        <img class="rebus-image" src="/images/slogi/{slog.eng}.png" alt="">
-      {/if}
-    {/each}
-    </div>
-
-  </div>
-
-  {:else}
-      <h1 style="text-align:center">Молодец!</h1>
-      <img src="https://media.giphy.com/media/3o6fJ47X7rsRR9wDlu/giphy.gif" alt="">
-      <button on:click={() => currentStep = 0}>Повторить</button>
-  {/if}
-</main>
-
 
 <style>
   .header {
@@ -268,3 +221,62 @@
     }
   }
 </style>
+
+<main>
+  {#if exercises[currentStep]}
+    <div class="header">
+      <div class="header-container">
+        <div class="switch">
+          <input
+            type="checkbox"
+            id="switch1"
+            class="switch__input"
+            bind:checked={showHint} />
+          <label for="switch1" class="switch__label">Подсказка</label>
+        </div>
+        <span class="ex-title">Упражнение №12</span>
+      </div>
+
+      <progress class="progress" max="19" value={currentStep} />
+    </div>
+
+    <div class="hint">
+      <img
+        class:transparent={!showHint}
+        src="/exercises/papip/images/rebuses/papip-hint.png"
+        alt="hint" />
+    </div>
+
+    <div class="container">
+      {#each exercises[currentStep].variants as word, index}
+        <img
+          src="/exercises/papip/images/variant-images/{word}.png"
+          class="img-{index + 1} img-var"
+          data-name={word}
+          on:click={check}
+          alt="img" />
+      {/each}
+
+      <!-- <img src="/exercises/papip/images/rebuses/{exercises[currentStep].rebus}.png" class="rebus" alt="img"> -->
+      <div class="rebus">
+        {#each exercises[currentStep].rebus as slog, index}
+          {#if !slog.image}
+            <span class="rebus-text">{slog.ru.toUpperCase()}</span>
+          {:else}
+            <img
+              class="rebus-image"
+              src="/images/slogi/{slog.eng}.png"
+              alt="" />
+          {/if}
+        {/each}
+      </div>
+
+    </div>
+  {:else}
+    <h1 style="text-align:center">Молодец!</h1>
+    <img
+      src="https://media.giphy.com/media/3o6fJ47X7rsRR9wDlu/giphy.gif"
+      alt="" />
+    <button on:click={() => (currentStep = 0)}>Повторить</button>
+  {/if}
+</main>
